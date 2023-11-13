@@ -1,10 +1,17 @@
-const app = require("express")()
+const express = require("express")
+const app = express()
 const port = 3000
 
-app.get("/", async (req, res) => {
-  res.send("<h1>heyo</h1><br><h2>heyo</h2>")
-})
+app.use(express.static("public"))
+app.set("views engine", "ejs")
 
 app.listen(port, () => {
-console.log("hello")
+  console.log(`connected to ${port}`)
+})
+app.get("/", (req, res) => {
+  res.redirect("/home")
+})
+
+app.get("/home", async (req, res) => {
+  res.render("home")
 })
