@@ -3,7 +3,7 @@ const app = express()
 const port = 3000
 
 app.use(express.static("public"))
-app.set("views engine", "ejs")
+app.set("view engine", "ejs")
 
 app.listen(port, () => {
   console.log(`connected to ${port}`)
