@@ -9,7 +9,7 @@ app.listen(port, () => {
   console.log(`connected to ${port}`)
 })
 app.get("/", (req, res) => {
-  res.redirect("/home")
+  res.render("home")
 })
 
 app.get("/home", async (req, res) => {
