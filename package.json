@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/Drnk-28/hello-jelly-drnk#readme",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "node-fetch": "^3.3.2"
   }
 }
